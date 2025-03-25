@@ -1,6 +1,8 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 import pygame
+
+from code.Const import WIN_HEIGHT, WIN_WIDTH
 from code.menu import Menu  # Importação corrigida
 
 class Game:
@@ -8,9 +10,10 @@ class Game:
         pass
 
         pygame.init()
-        self.window = pygame.display.set_mode((600, 480))  # Corrigido: agora usa self.window
+        self.window = pygame.display.set_mode((WIN_WIDTH, WIN_HEIGHT))  # Corrigido: agora usa self.window
 
     def run(self):
+
         while True:
             menu = Menu(self.window)  # Correção do nome da classe
             menu.run()
