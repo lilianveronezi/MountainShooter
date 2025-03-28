@@ -13,7 +13,6 @@ class Entity(ABC):
         self.speed = 0
 
 
-
     @abstractmethod
     def move(self, ):
         pass
